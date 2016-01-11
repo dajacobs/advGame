@@ -15,7 +15,6 @@ description(mountaintop,
 	'You are on the mountaintop.').
 description(labyrinth(_),
 	'You are lost in a winding corridor.').
-
 /*
 	Prints description of current location in maze.
 */
@@ -23,7 +22,6 @@ report :-
 	at(you,X),
 	description(X,Y),
 	write(Y), nl.
-
 /*
 	Moves you in accordance with direction(Dir), then
 	prints the description of the new location moved to.
@@ -35,7 +33,6 @@ move(Dir) :-
 	assert(at(you,Next)),
 	report,
 	!.	
-
 /*
 	Prints an error message to the user if an illegal move
 	is performed and does not move, staying put in current
