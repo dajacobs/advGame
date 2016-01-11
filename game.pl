@@ -35,3 +35,12 @@ move(Dir) :-
 	assert(at(you,Next)),
 	report,
 	!.	
+
+/*
+	Prints an error message to the user if an illegal move
+	is performed and does not move, staying put in current
+	location.
+*/	
+move(_) :-
+	write('That is not a legal move.\n\n'),
+	report.
