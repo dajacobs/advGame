@@ -15,3 +15,10 @@ description(mountaintop,
 	'You are on the mountaintop.').
 description(labyrinth(_),
 	'You are lost in a winding corridor.').
+/*
+	Prints description of current location in maze.
+*/
+report :-
+	at(you,X),
+	description(X,Y),
+	write(Y), nl.
