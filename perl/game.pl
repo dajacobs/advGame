@@ -90,3 +90,7 @@ cliff :-
   retract(at(you,cliff)),
   assert(at(you,done)),
   !.
+/*
+	But if you are not at the cliff nothing happens.
+*/
+cliff.	
