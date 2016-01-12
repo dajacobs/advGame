@@ -27,7 +27,8 @@ connect(valley,forward,path).
 connect(path,right,cliff).
 connect(path,left,cliff).
 connect(path,forward,fork).
-	
+connect(mountaintop,left,fork).
+
 /*
 	Moves you in accordance with direction(Dir), then
 	prints the description of the new location moved to.
