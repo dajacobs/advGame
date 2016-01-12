@@ -30,6 +30,8 @@ connect(path,forward,fork).
 connect(mountaintop,left,fork).
 connect(maze(0),left,maze(1)).
 connect(maze(0),right,maze(3)).
+connect(maze(1),left,maze(0)).
+connect(maze(1),right,maze(2)).
 
 /*
 	Moves you in accordance with direction(Dir), then
