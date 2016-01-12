@@ -194,4 +194,8 @@ main([Move|Y],X) :-
 	ogre,
 	treasure,
 	cliff,
-	main(L,X).	
+	main(L,X).
+read_file(Stream,[X|L]) :-
+	\+ at_end_of_stream(Stream),
+	read(Stream,X),
+	read_file(Stream,L).		
