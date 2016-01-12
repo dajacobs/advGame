@@ -74,6 +74,17 @@ connect(labyrinth(14),left,labyrinth(15)).
 connect(labyrinth(14),right,labyrinth(11)).
 connect(labyrinth(15),left,fork).
 connect(labyrinth(15),right,fork).
+
+path(0,path).
+path(1,cliff).
+path(2,fork).
+path(3,mountaintop).
+path(4,maze(0)).
+path(5,maze(1)).
+path(6,maze(2)).
+path(7,maze(3)).
+path(8,maze(4)).
+
 /*
 	Moves you in accordance with direction(Dir), then
 	prints the description of the new location moved to.
