@@ -98,6 +98,8 @@ path(19,labyrinth(10)).
 path(20,labyrinth(11)).
 path(21,labyrinth(12)).
 path(22,labyrinth(13)).
+path(23,labyrinth(14)).
+path(24,labyrinth(15)).
 
 /*
 	Moves you in accordance with direction(Dir), then
