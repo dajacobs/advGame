@@ -74,7 +74,9 @@ connect(labyrinth(14),left,labyrinth(15)).
 connect(labyrinth(14),right,labyrinth(11)).
 connect(labyrinth(15),left,fork).
 connect(labyrinth(15),right,fork).
-
+/*
+	Pathing for traversing the maze.
+*/
 path(0,path).
 path(1,cliff).
 path(2,fork).
@@ -100,7 +102,6 @@ path(21,labyrinth(12)).
 path(22,labyrinth(13)).
 path(23,labyrinth(14)).
 path(24,labyrinth(15)).
-
 /*
 	Moves you in accordance with direction(Dir), then
 	prints the description of the new location moved to.
