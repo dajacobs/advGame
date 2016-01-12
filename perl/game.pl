@@ -63,3 +63,15 @@ ogre :-
 	then nothing happens.
 */
 ogre.	
+/*
+	When Treasure and current location equal, then
+	you win the game.
+*/
+treasure :-
+	at(treasure,Loc),
+	at(you,Loc),
+	write('There is a treasure here.\n'),
+	write('Congratulations, you win!\n'),
+	retract(at(you,Loc)),
+	assert(at(you,done)),
+	!.
