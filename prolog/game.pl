@@ -90,6 +90,10 @@ path(11,labyrinth(2)).
 path(12,labyrinth(3)).
 path(13,labyrinth(4)).
 path(14,labyrinth(5)).
+path(15,labyrinth(6)).
+path(16,labyrinth(7)).
+path(17,labyrinth(8)).
+path(18,labyrinth(9)).
 
 /*
 	Moves you in accordance with direction(Dir), then
