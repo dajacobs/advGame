@@ -37,6 +37,8 @@ connect(maze(2),left,fork).
 connect(maze(2),right,maze(0)).
 connect(maze(3),left,maze(0)).
 connect(maze(3),right,maze(3)).
+connect(maze(4),forward,mountaintop).
+connect(maze(4),right,maze(4)).
 
 /*
 	Moves you in accordance with direction(Dir), then
