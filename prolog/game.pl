@@ -59,6 +59,9 @@ connect(labyrinth(9),left,labyrinth(10)).
 connect(labyrinth(9),right,labyrinth(8)).
 connect(labyrinth(10),left,labyrinth(9)).
 connect(labyrinth(10),right,labyrinth(11)).
+connect(labyrinth(11),left,labyrinth(12)).
+connect(labyrinth(11),right,labyrinth(10)).
+
 
 /*
 	Moves you in accordance with direction(Dir), then
