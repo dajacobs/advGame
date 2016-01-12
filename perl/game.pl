@@ -58,3 +58,8 @@ ogre :-
 	retract(at(you,Loc)),
 	assert(at(you,done)),
 	!.
+/*
+	When Ogre and currention location are not equal,
+	then nothing happens.
+*/
+ogre.	
