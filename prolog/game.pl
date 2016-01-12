@@ -41,6 +41,8 @@ connect(maze(4),forward,mountaintop).
 connect(maze(4),right,maze(4)).
 connect(labyrinth(0),left,labyrinth(1)).
 connect(labyrinth(0),right,labyrinth(15)).
+connect(labyrinth(1),left,labyrinth(2)).
+connect(labyrinth(1),right,labyrinth(10)).
 
 /*
 	Moves you in accordance with direction(Dir), then
