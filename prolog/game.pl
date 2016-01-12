@@ -182,3 +182,11 @@ main(_,X) :-
 	write('Thanks for playing.\n'),
 	go(X),
 	!.
+main([Move|Y],X) :-
+	write('\nNext move -- '),
+	write(Move),nl,
+	call(Move),
+	ogre,
+	treasure,
+	cliff,
+	main(L,X).	
