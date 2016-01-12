@@ -75,3 +75,8 @@ treasure :-
 	retract(at(you,Loc)),
 	assert(at(you,done)),
 	!.
+/*
+	When Treasure and current location are not equal,
+	then nothing happens.	 
+*/
+treasure.	
