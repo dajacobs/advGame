@@ -174,6 +174,9 @@ cliff :-
 	But if you are not at the cliff nothing happens.
 */
 cliff.
+/*
+	Main loop. Will stop if player won or lost.
+*/
 main(_,X) :-
 	at(you,done),
 	write('Thanks for playing.\n'),
