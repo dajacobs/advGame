@@ -47,3 +47,14 @@ move(_) :-
 forward :- move(forward).
 left :- move(left).
 right :- move(right).	
+/*
+	When Ogre and current location equal, then it kills you.
+*/
+ogre :- 
+	at(ogre,Loc),
+	at(you,Loc),
+	write('An ogre sucks your brain out through\n'),
+	write('your eye sockets, and you die.\n'),
+	retract(at(you,Loc)),
+	assert(at(you,done)),
+	!.
