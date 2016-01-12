@@ -182,6 +182,11 @@ main(_,X) :-
 	write('Thanks for playing.\n'),
 	go(X),
 	!.
+/*
+	Main loop. Opens all the command files and
+  	reads them as streams, reading each file new
+ 	line and then closing the file stream.
+*/	
 main([Move|Y],X) :-
 	write('\nNext move -- '),
 	write(Move),nl,
