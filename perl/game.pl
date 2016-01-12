@@ -28,6 +28,8 @@ connect(path,right,cliff).
 connect(path,left,cliff).
 connect(path,forward,fork).
 connect(mountaintop,left,fork).
+connect(maze(0),left,maze(1)).
+connect(maze(0),right,maze(3)).
 
 /*
 	Moves you in accordance with direction(Dir), then
