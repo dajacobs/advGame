@@ -84,6 +84,12 @@ path(5,maze(1)).
 path(6,maze(2)).
 path(7,maze(3)).
 path(8,maze(4)).
+path(9,labyrinth(0)).
+path(10,labyrinth(1)).
+path(11,labyrinth(2)).
+path(12,labyrinth(3)).
+path(13,labyrinth(4)).
+path(14,labyrinth(5)).
 
 /*
 	Moves you in accordance with direction(Dir), then
