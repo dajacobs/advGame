@@ -195,6 +195,10 @@ main([Move|Y],X) :-
 	treasure,
 	cliff,
 	main(L,X).
+/*
+ 	Reads the file, which is treated as a
+  	stream. The stream is read at the end.
+*/
 read_file(Stream,[X|L]) :-
 	\+ at_end_of_stream(Stream),
 	read(Stream,X),
