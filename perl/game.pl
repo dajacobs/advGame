@@ -35,6 +35,8 @@ connect(maze(1),right,maze(2)).
 connect(maze(2),forward,maze(4)).
 connect(maze(2),left,fork).
 connect(maze(2),right,maze(0)).
+connect(maze(3),left,maze(0)).
+connect(maze(3),right,maze(3)).
 
 /*
 	Moves you in accordance with direction(Dir), then
