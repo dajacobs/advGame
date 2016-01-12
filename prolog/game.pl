@@ -22,7 +22,13 @@ report :-
 	at(you,X),
 	description(X,Y),
 	write(Y), nl.
-
+/*
+	These connect predicates establish the map.
+	The meaning of connect(X,Dir,Y) is that if you
+	are at X and you move in direction Dir, you
+	get to Y.  Recognized directions are
+	forward, right, and left.
+*/
 connect(valley,forward,path).
 connect(path,right,cliff).
 connect(path,left,cliff).
@@ -68,7 +74,6 @@ connect(labyrinth(14),left,labyrinth(15)).
 connect(labyrinth(14),right,labyrinth(11)).
 connect(labyrinth(15),left,fork).
 connect(labyrinth(15),right,fork).
-
 /*
 	Moves you in accordance with direction(Dir), then
 	prints the description of the new location moved to.
