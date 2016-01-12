@@ -79,4 +79,14 @@ treasure :-
 	When Treasure and current location are not equal,
 	then nothing happens.	 
 */
-treasure.	
+treasure.
+/*
+  	When cliff and current location equal, then 
+  	you fall off and die.
+*/
+cliff :-
+  at(you,cliff),
+  write('You fall off and die.\n'),
+  retract(at(you,cliff)),
+  assert(at(you,done)),
+  !.
