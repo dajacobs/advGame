@@ -22,6 +22,8 @@ report :-
 	at(you,X),
 	description(X,Y),
 	write(Y), nl.
+
+connect(valley,forward,path).	
 /*
 	Moves you in accordance with direction(Dir), then
 	prints the description of the new location moved to.
