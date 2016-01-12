@@ -173,4 +173,9 @@ cliff :-
 /*
 	But if you are not at the cliff nothing happens.
 */
-cliff.	
+cliff.
+main(_,X) :-
+	at(you,done),
+	write('Thanks for playing.\n'),
+	go(X),
+	!.
