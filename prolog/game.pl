@@ -200,6 +200,15 @@ commands_v1(X) :-
 	report,
 	main(Lines,X), !.
 /*
+ 	Command for v2.
+*/
+commands_v2(X) :-
+	open('commands_v2', read, Str),
+	read_file(Str, Lines),
+	close(Str),
+	report,
+	main(Lines,X), !.	
+/*
  	Reads the file, which is treated as a
   	stream. The stream is read at the end.
 */
