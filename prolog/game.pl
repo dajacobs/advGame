@@ -216,7 +216,16 @@ commands_v3(X) :-
 	read_file(Str, Lines),
 	close(Str),
 	report,
-	main(Lines,X), !.		
+	main(Lines,X), !.
+/*
+ 	Command for v4.
+*/
+commands_v4(X) :-
+	open('commands_v4', read, Str),
+	read_file(Str, Lines),
+	close(Str),
+	report,
+	main(Lines,X), !.			
 /*
  	Reads the file, which is treated as a
   	stream. The stream is read at the end.
