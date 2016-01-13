@@ -111,8 +111,7 @@ move(Dir) :-
 	connect(Loc,Dir,Next),
 	retract(at(you,Loc)),
 	assert(at(you,Next)),
-	report,
-	!.	
+	report, !.	
 /*
 	Prints an error message to the user if an illegal move
 	is performed and does not move, staying put in current
@@ -136,8 +135,7 @@ ogre :-
 	write('An ogre sucks your brain out through\n'),
 	write('your eye sockets, and you die.\n'),
 	retract(at(you,Loc)),
-	assert(at(you,done)),
-	!.
+	assert(at(you,done)), !.
 /*
 	When Ogre and currention location are not equal,
 	then nothing happens.
@@ -153,8 +151,7 @@ treasure :-
 	write('There is a treasure here.\n'),
 	write('Congratulations, you win!\n'),
 	retract(at(you,Loc)),
-	assert(at(you,done)),
-	!.
+	assert(at(you,done)), !.
 /*
 	When Treasure and current location are not equal,
 	then nothing happens.	 
@@ -168,8 +165,7 @@ cliff :-
   at(you,cliff),
   write('You fall off and die.\n'),
   retract(at(you,cliff)),
-  assert(at(you,done)),
-  !.
+  assert(at(you,done)), !.
 /*
 	But if you are not at the cliff nothing happens.
 */
@@ -180,8 +176,7 @@ cliff.
 main(_,X) :-
 	at(you,done),
 	write('Thanks for playing.\n'),
-	go(X),
-	!.
+	go(X), !.
 /*
 	Main loop. Opens all the command files and
   	reads them as streams, reading each file new
@@ -242,5 +237,4 @@ go([row(X,Y)|Z]) :-
 	command_v3(Z),
 	command_v4(Z),
 	command_v5(Z),
-	command_vR(Z),
-	!.					
+	command_vR(Z), !.					
