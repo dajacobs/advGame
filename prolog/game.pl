@@ -202,4 +202,10 @@ main([Move|Y],X) :-
 read_file(Stream,[X|L]) :-
 	\+ at_end_of_stream(Stream),
 	read(Stream,X),
-	read_file(Stream,L).		
+	read_file(Stream,L).
+/*
+  	Reads the file at the end of the input 
+  	stream. The file is treated as a stream.
+*/	
+read_file(Stream,[]) :-
+	at_end_of_stream(Stream).			
