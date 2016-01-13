@@ -223,4 +223,13 @@ reset :-
 	assert(at(treasure,LocalY)),
 	write('This is an adventure game. \n'),
 	write('Legal moves are left, right, or forward.\n'),
-	write('End each move with a period.\n\n').					
+	write('End each move with a period.\n\n').
+/*
+ 	The starting point for the game.  We assert 
+ 	the initial conditions, print an initial report, 
+ 	then start the main loop. Reads the con-figuration 
+ 	file.
+*/
+go :-
+	csv_read_file('configurations.txt',X)	
+	go(X).						
