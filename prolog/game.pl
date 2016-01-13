@@ -234,7 +234,16 @@ commands_v5(X) :-
 	read_file(Str, Lines),
 	close(Str),
 	report,
-	main(Lines,X), !.				
+	main(Lines,X), !.
+/*
+ 	Command for vR.
+*/
+commands_vR(X) :-
+	open('commands_vR', read, Str),
+	read_file(Str, Lines),
+	close(Str),
+	report,
+	main(Lines,X), !.					
 /*
  	Reads the file, which is treated as a
   	stream. The stream is read at the end.
@@ -282,4 +291,4 @@ go([row(X,Y)|Z]) :-
 	command_v3(Z),
 	command_v4(Z),
 	command_v5(Z),
-	command_vR(Z), !.					
+	command_vR(Z), !.
