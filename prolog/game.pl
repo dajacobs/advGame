@@ -215,4 +215,7 @@ reset :-
 	path(Y,LocalY),
 	assert(at(you,valley)),
 	assert(at(ogre,LocalX)),
-	assert(at(treasure,LocalY)).				
+	assert(at(treasure,LocalY)),
+	write('This is an adventure game. \n'),
+	write('Legal moves are left, right, or forward.\n'),
+	write('End each move with a period.\n\n').				
