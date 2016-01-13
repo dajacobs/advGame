@@ -232,4 +232,15 @@ reset :-
 */
 go :-
 	csv_read_file('configurations.txt',X)	
-	go(X).						
+	go(X).		
+go([]).
+go([row(X,Y)|Z]) :-
+	reset,
+	command_v1(Z),
+	command_v2(Z),
+	command_v3(Z),
+	command_v3(Z),
+	command_v4(Z),
+	command_v5(Z),
+	command_vR(Z),
+	!.					
