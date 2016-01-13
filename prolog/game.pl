@@ -191,6 +191,15 @@ main([Move|Y],X) :-
 	cliff,
 	main(L,X).
 /*
+	Command for v1.
+*/	
+commands_v1(X) :-
+	open('commands_v1', read, Str),
+	read_file(Str, Lines),
+	close(Str),
+	report,
+	main(Lines,X), !.
+/*
  	Reads the file, which is treated as a
   	stream. The stream is read at the end.
 */
