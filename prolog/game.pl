@@ -208,4 +208,11 @@ read_file(Stream,[X|L]) :-
   	stream. The file is treated as a stream.
 */	
 read_file(Stream,[]) :-
-	at_end_of_stream(Stream).			
+	at_end_of_stream(Stream).
+reset :-
+	retractall(at(_,_)), % clean up from previous runs
+	path(X,LocalX),
+	path(Y,LocalY),
+	assert(at(you,valley)),
+	assert(at(ogre,LocalX)),
+	assert(at(treasure,LocalY)).				
