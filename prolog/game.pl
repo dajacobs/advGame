@@ -209,6 +209,11 @@ read_file(Stream,[X|L]) :-
 */	
 read_file(Stream,[]) :-
 	at_end_of_stream(Stream).
+/*
+	Resets the runs for the game.  We assert 
+	the initial conditions, print an initial
+  	report, then start the main loop.
+*/
 reset :-
 	retractall(at(_,_)), % clean up from previous runs
 	path(X,LocalX),
@@ -218,4 +223,4 @@ reset :-
 	assert(at(treasure,LocalY)),
 	write('This is an adventure game. \n'),
 	write('Legal moves are left, right, or forward.\n'),
-	write('End each move with a period.\n\n').				
+	write('End each move with a period.\n\n').					
