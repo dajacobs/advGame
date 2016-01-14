@@ -24,7 +24,7 @@ int main()
 	// {
 	// 	return location;
 	// }
-	string report()
+	string report(int loc)
 	{
 		if(loc == -1) 
 		{
@@ -58,5 +58,37 @@ int main()
 		{
 			cout << "You are lost without hope.";
 		}
+	}
+	// Read configuration file
+	void readConf(string file)
+	{
+		vector <vector <string>> data;
+		ifstream infile(file);
+		while(infile)
+		{
+			string s;
+			if(!getline(infile, s)) { break; }
+			istringstream ss(s);
+			vector <string> record;
+			while(ss)
+			{
+				string s;
+				if(!getline(ss, s, ',')) { break; }
+				record.push_back(s);
+			}
+			data.push_back(record);
+		}
+		for(int i = 0; i <= sizeof(ogre); ++i) 
+		{
+			while(!data.empty())
+			{
+				ogre[i] += data.front();
+				treasure[i] += data.pop();
+			}
+		}
+	}
+	if(!infile.eof())
+	{
+		cerr << "File read error.\n";
 	}
 }
