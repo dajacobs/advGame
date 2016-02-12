@@ -202,6 +202,17 @@ int main()
 		else if(direction == move[2] && locate() == 13){
 			location += 5;
 		}
+		//Labyrinth 5
+		else if(direction == move[1] && locate() == 14)
+		{
+			++location;
+			report(6);
+		}
+		else if(direction == move[2] && locate() == 14)
+		{
+			location += 3;
+			report(6); 
+		}
 		
 	}
 	//Read configuration file
