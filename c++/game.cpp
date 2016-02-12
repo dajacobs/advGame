@@ -73,6 +73,13 @@ int main()
 			location += 2;
 			report(3); //Fork
 		}
+		else if((direction == move[1] || direction == move[2]) && location() == 0)
+		{
+			report(2); //Cliff Edge
+			cout << "You fall off and die.\n";
+			cout << "Thanks for plaing.\n";
+			report(location);
+		}
 	}
 	//Read configuration file
 	void readConf(string file)
