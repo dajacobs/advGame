@@ -118,6 +118,22 @@ int main()
 			++location;
 			report(4);
 		}
+		//Maze 2
+		else if(direction == move[0] && locate() == 6)
+		{
+			location += 8;
+			report(4);
+		}
+		else if(direction == move[1] && locate() == 6)
+		{
+			location -= 4;
+			report(4);
+		}
+		else if(direction == move[2] && locate() == 6)
+		{
+			location -= 2;
+			report(4);
+		}
 	}
 	//Read configuration file
 	void readConf(string file)
