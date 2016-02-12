@@ -144,6 +144,16 @@ int main()
 		{
 			report(4);
 		}
+		//Maze 4
+		else if(direction == move[0] && locate() == 8)
+		{
+			location -= 5;
+			report(4);
+		}
+		else if(direction == move[2] && locate() == 8)
+		{
+			report(4);
+		}
 	}
 	//Read configuration file
 	void readConf(string file)
