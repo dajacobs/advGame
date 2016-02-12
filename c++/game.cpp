@@ -86,6 +86,11 @@ int main()
 			location += 7;
 			report(6); //Labyrinth
 		}
+		else if(direction == move[1] && locate() == 2)
+		{
+			location += 2;
+			report(4); //Maze
+		}
 	}
 	//Read configuration file
 	void readConf(string file)
