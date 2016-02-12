@@ -107,6 +107,17 @@ int main()
 			++location;
 			report(4);
 		}
+		//Maze 1
+		else if(direction == move[1] && locate() == 5)
+		{
+			--location;
+			report(4);
+		}
+		else if(direction == move[2] && locate() == 5)
+		{
+			++location;
+			report(4);
+		}
 	}
 	//Read configuration file
 	void readConf(string file)
