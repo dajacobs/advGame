@@ -62,9 +62,16 @@ int main()
 	void move(string direction)
 	{
 		//Valley
-		if(direction == move[0] && locate() == -1){
+		if(direction == move[0] && locate() == -1)
+		{
 			++location;
-			report(0);
+			report(0); //Path
+		}
+		//Trail
+		else if(direction == move[0] && locate() == 0)
+		{
+			location += 2;
+			report(3); //Fork
 		}
 	}
 	//Read configuration file
