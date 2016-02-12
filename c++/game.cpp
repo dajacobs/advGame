@@ -213,6 +213,12 @@ int main()
 			location += 3;
 			report(6); 
 		}
+		//Labyrinth 6
+		else if(direction == move[2] && locate() == 15)
+		{
+			++location;
+			report(6); 
+		}
 		
 	}
 	//Read configuration file
