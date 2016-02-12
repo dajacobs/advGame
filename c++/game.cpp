@@ -193,6 +193,16 @@ int main()
 			++location;
 			report(6);
 		}
+		//Labyrinth 4
+		else if(direction == move[1] && locate() == 13)
+		{
+			++location;
+			report(6);
+		}
+		else if(direction == move[2] && locate() == 13){
+			location += 5;
+		}
+		
 	}
 	//Read configuration file
 	void readConf(string file)
