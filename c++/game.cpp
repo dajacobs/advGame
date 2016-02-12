@@ -91,6 +91,11 @@ int main()
 			location += 2;
 			report(4); //Maze
 		}
+		else if(direction == move[2] && locate() == 2)
+		{
+			++location;
+			report(5); //Mountaintop
+		}
 	}
 	//Read configuration file
 	void readConf(string file)
