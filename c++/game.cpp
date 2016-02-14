@@ -414,4 +414,16 @@ int main()
 			cout << "That is not a legal move.\n";
 		}
 	}
+	//Main function
+	void go()
+	{
+		readConf("configurations.txt");
+		readComm("commands_v1.txt", 1);
+		readComm("commands_v2.txt", 2);
+		readComm("commands_v3.txt", 3);
+		readComm("commands_v4.txt", 4);
+		readComm("commands_v5.txt", 5);
+		readComm("commands_vR.txt", 6);
+	}
+	return 0;
 }
