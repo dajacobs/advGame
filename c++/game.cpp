@@ -23,6 +23,100 @@ int main()
 	{
 		return location;
 	}
+	//Read configuration file
+	void readConf(string file)
+	{
+		vector <vector <string>> data;
+		ifstream infile(file);
+		while(infile)
+		{
+			string s;
+			if(!getline(infile, s)) { break; }
+			istringstream ss(s);
+			vector <string> record;
+			while(ss)
+			{
+				string s;
+				if(!getline(ss, s, ',')) { break; }
+				record.push_back(s);
+			}
+			data.push_back(record);
+		}
+		for(int i = 0; i <= sizeof(ogre); ++i) 
+		{
+			while(!data.empty())
+			{
+				ogre[i] += data.front();
+				treasure[i] += data.pop();
+			}
+		}
+	}
+	if(!infile.eof())
+	{
+		cerr << "File read error.\n";
+	}
+	//Read command files
+	void readComm(string file, int v)
+	{
+		string line;
+		ifstream myfile(file);
+		if(myfile.is_open())
+		{
+			while(getline(myfile,line))
+			{
+				if(v == 1)
+				{
+					string commOne[26];
+					for(int i = 0; i <= sizeof(commOne); ++i)
+					{
+						commOne[i] += line;
+					}
+				}
+				else if(v == 2)
+				{
+					string commTwo[27];
+					for(int i = 0; i <= sizeof(commTwo); ++i)
+					{
+						commTwo[i] += line;
+					}
+				}
+				else if(v == 3)
+				{
+					string commThree[26];
+					for(int i = 0; i <= sizeof(commThree); ++i)
+					{
+						commThree[i] += line;
+					}
+				}
+				else if(v == 4)
+				{
+					string commFour[29];
+					for(int i = 0; i <= sizeof(commFour); ++i)
+					{
+						commFour[i] += line;
+					}
+				}
+				else if(v == 5)
+				{
+					string commFive[27];
+					for(int i = 0; i <= sizeof(commFive); ++i)
+					{
+						commFive[i] += line;
+					}
+				}
+				else if(v == 6)
+				{
+					string commSix[125];
+					for(int i = 0; i <= sizeof(commSix); ++i)
+					{
+						commSix[i] += line;
+					}
+				}
+			}
+			myfile.close();
+		}
+		else cout << "File read error.\n";
+	}
 	string report(int loc)
 	{
 		if(loc == -1) 
@@ -200,7 +294,8 @@ int main()
 			++location;
 			report(6);
 		}
-		else if(direction == move[2] && locate() == 13){
+		else if(direction == move[2] && locate() == 13)
+		{
 			location += 5;
 		}
 		//Labyrinth 5
@@ -318,84 +413,5 @@ int main()
 		{
 			cout << "That is not a legal move.\n";
 		}
-	}
-	//Read configuration file
-	void readConf(string file)
-	{
-		vector <vector <string>> data;
-		ifstream infile(file);
-		while(infile)
-		{
-			string s;
-			if(!getline(infile, s)) { break; }
-			istringstream ss(s);
-			vector <string> record;
-			while(ss)
-			{
-				string s;
-				if(!getline(ss, s, ',')) { break; }
-				record.push_back(s);
-			}
-			data.push_back(record);
-		}
-		for(int i = 0; i <= sizeof(ogre); ++i) 
-		{
-			while(!data.empty())
-			{
-				ogre[i] += data.front();
-				treasure[i] += data.pop();
-			}
-		}
-	}
-	if(!infile.eof())
-	{
-		cerr << "File read error.\n";
-	}
-	//Read command files
-	void readComm(string file, int v){
-		string line;
-		ifstream myfile(file);
-		if(myfile.is_open()){
-			while(getline(myfile,line)){
-				if(v == 1){
-					string commOne[26];
-					for(int i = 0; i <= sizeof(commOne); ++i){
-						commOne[i] += line;
-					}
-				}
-				else if(v == 2){
-					string commTwo[27];
-					for(int i = 0; i <= sizeof(commTwo); ++i){
-						commTwo[i] += line;
-					}
-				}
-				else if(v == 3){
-					string commThree[26];
-					for(int i = 0; i <= sizeof(commThree); ++i){
-						commThree[i] += line;
-					}
-				}
-				else if(v == 4){
-					string commFour[29];
-					for(int i = 0; i <= sizeof(commFour); ++i){
-						commFour[i] += line;
-					}
-				}
-				else if(v == 5){
-					string commFive[27];
-					for(int i = 0; i <= sizeof(commFive); ++i){
-						commFive[i] += line;
-					}
-				}
-				else if(v == 6){
-					string commSix[125];
-					for(int i = 0; i <= sizeof(commSix); ++i){
-						commSix[i] += line;
-					}
-				}
-			}
-			myfile.close();
-		}
-		else cout << "File read error.\n";
 	}
 }
