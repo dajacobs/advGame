@@ -424,6 +424,21 @@ int main()
 		readComm("commands_v4.txt", 4);
 		readComm("commands_v5.txt", 5);
 		readComm("commands_vR.txt", 6);
+		if(locate() == -1)
+		{
+			cout << "This is an adventure game.\n";
+			cout << "Legal moves are left, right, or forward.\n";
+			cout << "Legal moves are left, right, or forward.\n";
+			cout << "End each move with a period.\n\n";
+			report(location+2);
+			cout << "\nNext move --";
+			run();
+		}
+		else
+		{
+			cout << "\nNext move --";
+			run();
+		}
 	}
 	return 0;
 }
