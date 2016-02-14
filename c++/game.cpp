@@ -285,6 +285,12 @@ int main()
 			++location;
 			report(6);
 		}
+		//Labyrinth 13
+		else if(direction == move[1] && locate() == 22)
+		{
+			++location;
+			report(6);
+		}
 		
 	}
 	//Read configuration file
