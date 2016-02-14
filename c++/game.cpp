@@ -302,7 +302,21 @@ int main()
 			location -= 3;
 			report(6);
 		}
-		
+		//Labyrinth 15
+		else if(direction == move[1] && locate() == 24)
+		{
+			location -= 22;
+			report(6);
+		}
+		else if(direction == move[2] && locate() == 24)
+		{
+			location -= 22;
+			report(6);
+		}
+		else
+		{
+			cout << "That is not a legal move.\n";
+		}
 	}
 	//Read configuration file
 	void readConf(string file)
