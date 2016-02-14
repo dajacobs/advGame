@@ -79,6 +79,7 @@ int main()
 			cout << "You fall off and die.\n";
 			cout << "Thanks for plaing.\n";
 			report(location);
+			go();
 		}
 		//Fork
 		else if(direction == move[0] && locate() = 2)
@@ -349,5 +350,22 @@ int main()
 	if(!infile.eof())
 	{
 		cerr << "File read error.\n";
+	}
+	//Read command files
+	void readComm(string file, int v){
+		string line;
+		ifstream myfile(file);
+		if(myfile.is_open()){
+			while(getline(myfile,line)){
+				if(v == 1){
+					string commOne[26];
+					for(int i = 0; i <= sizeof(commOne); ++i){
+						commOne[i] += line;
+					}
+				}
+			}
+			myfile.close();
+		}
+		else cout << "File read error.\n";
 	}
 }
