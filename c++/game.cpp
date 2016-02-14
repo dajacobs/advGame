@@ -363,6 +363,18 @@ int main()
 						commOne[i] += line;
 					}
 				}
+				else if(v == 2){
+					string commTwo[27];
+					for(int i = 0; i <= sizeof(commTwo); ++i){
+						commTwo[i] += line;
+					}
+				}
+				else if(v == 3){
+					string commThree[26];
+					for(int i = 0; i <= sizeof(commThree); ++i){
+						commThree[i] += line;
+					}
+				}
 			}
 			myfile.close();
 		}
