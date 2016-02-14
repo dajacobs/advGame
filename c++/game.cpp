@@ -375,6 +375,24 @@ int main()
 						commThree[i] += line;
 					}
 				}
+				else if(v == 4){
+					string commFour[29];
+					for(int i = 0; i <= sizeof(commFour); ++i){
+						commFour[i] += line;
+					}
+				}
+				else if(v == 5){
+					string commFive[27];
+					for(int i = 0; i <= sizeof(commFive); ++i){
+						commFive[i] += line;
+					}
+				}
+				else if(v == 6){
+					string commSix[125];
+					for(int i = 0; i <= sizeof(commSix); ++i){
+						commSix[i] += line;
+					}
+				}
 			}
 			myfile.close();
 		}
