@@ -414,6 +414,11 @@ int main()
 			cout << "That is not a legal move.\n";
 		}
 	}
+	//Run commands
+	void run()
+	{
+		
+	}
 	//Main function
 	void go()
 	{
