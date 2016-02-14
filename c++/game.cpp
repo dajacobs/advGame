@@ -252,6 +252,17 @@ int main()
 			--location;
 			report(6);
 		}
+		//Labyrinth 10
+		else if(direction == move[1] && locate() == 19)
+		{
+			--location;
+			report(6);
+		}
+		else if(direction == move[2] && locate() == 19)
+		{
+			++location;
+			report(6);
+		}
 		
 	}
 	//Read configuration file
