@@ -524,11 +524,33 @@ int main()
 			}
 			cout << "Average Wins: " << average;
 		}
-
 		lineE << "Scenario: 5"; << endl;
 		lineE << "Commands_v5"; << endl;
 		cout << lineE.str();
-
+		for(int i = 0; i <= sizeof(commFive); ++i)
+		{
+			direction = commFive[i];
+			cin >> direction;
+			move(direction);
+			win == 0;
+			loss == 0;
+			for(int i = 0; i <= sizeof(ogre); ++i)
+			{
+				if(locate() == ogre[i])
+				{
+					++loss;
+					cout << "An ogre sucks your brain out through\n'";
+					cout << "your eye sockets, and you die.\n";
+				}
+				else if(locate() == treasure[i])
+				{
+					++win;
+					cout << "There is a treasure here.\n')";
+					cout << "Congratulations, you win!\n";
+				}
+			}
+			cout << "Average Wins: " << average;
+		}
 		lineF << "Scenario: 6"; << endl;
 		lineF << "Commands_v6"; << endl;
 		cout << lineF.str();
