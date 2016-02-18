@@ -420,6 +420,25 @@ int main()
 		lineA << "Scenario: 1"; << endl;
 		lineA << "Commands_v1"; << endl;
 		cout << lineA.str();
+		for(int i = 0; i <= sizeof(commOne); ++i)
+		{
+			direction = commOne[i];
+			cin >> direction;
+			move(direction);
+			win == 0;
+			loss == 0;
+			for(int i = 0; i <= sizeof(ogre); ++i)
+			{
+				if(locate() == ogre[i])
+				{
+					++loss;
+				}
+				else if(locate() == treasure[i])
+				{
+					++win;
+				}
+			}
+		}
 
 		lineB << "Scenario: 2"; << endl;
 		lineB << "Commands_v2"; << endl;
