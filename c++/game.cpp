@@ -444,9 +444,9 @@ int main()
 			}
 			cout << "Average Wins: " << average;
 		}
-
 		lineB << "Scenario: 2"; << endl;
 		lineB << "Commands_v2"; << endl;
+		cout << lineB.str();
 		for(int i = 0; i <= sizeof(commTwo); ++i)
 		{
 			direction = commTwo[i];
@@ -471,12 +471,32 @@ int main()
 			}
 			cout << "Average Wins: " << average;
 		}
-		cout << lineB.str();
-
 		lineC << "Scenario: 3"; << endl;
 		lineC << "Commands_v3"; << endl;
 		cout << lineC.str();
-
+		for(int i = 0; i <= sizeof(commThree); ++i)
+		{
+			direction = commThree[i];
+			cin >> direction;
+			move(direction);
+			win == 0;
+			loss == 0;
+			for(int i = 0; i <= sizeof(ogre); ++i)
+			{
+				if(locate() == ogre[i]){
+					++loss;
+					cout << "An ogre sucks your brain out through\n'";
+					cout << "your eye sockets, and you die.\n";
+				}
+				else if(locate() == treasure[i])
+				{
+					++win;
+					cout << "There is a treasure here.\n')";
+					cout << "Congratulations, you win!\n";
+				}
+			}
+			cout << "Average Wins: " << average;
+		}
 		lineD << "Scenario: 4"; << endl;
 		lineD << "Commands_v4"; << endl;
 		cout << lineD.str();
