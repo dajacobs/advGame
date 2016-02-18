@@ -432,12 +432,17 @@ int main()
 				if(locate() == ogre[i])
 				{
 					++loss;
+					cout << "An ogre sucks your brain out through\n'";
+					cout << "your eye sockets, and you die.\n";
 				}
 				else if(locate() == treasure[i])
 				{
 					++win;
+					cout << "There is a treasure here.\n')";
+					cout << "Congratulations, you win!\n";
 				}
 			}
+			cout << "Average Wins: " << average;
 		}
 
 		lineB << "Scenario: 2"; << endl;
