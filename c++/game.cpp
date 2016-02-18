@@ -417,7 +417,29 @@ int main()
 	//Run commands
 	void run()
 	{
-		
+		lineA << "Scenario: 1"; << endl;
+		lineA << "Commands_v1"; << endl;
+		cout << lineA.str();
+
+		lineB << "Scenario: 2"; << endl;
+		lineB << "Commands_v2"; << endl;
+		cout << lineB.str();
+
+		lineC << "Scenario: 3"; << endl;
+		lineC << "Commands_v3"; << endl;
+		cout << lineC.str();
+
+		lineD << "Scenario: 4"; << endl;
+		lineD << "Commands_v4"; << endl;
+		cout << lineD.str();
+
+		lineE << "Scenario: 5"; << endl;
+		lineE << "Commands_v5"; << endl;
+		cout << lineE.str();
+
+		lineF << "Scenario: 6"; << endl;
+		lineF << "Commands_v6"; << endl;
+		cout << lineF.str();
 	}
 	//Main function
 	void go()
