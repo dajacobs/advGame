@@ -500,6 +500,30 @@ int main()
 		lineD << "Scenario: 4"; << endl;
 		lineD << "Commands_v4"; << endl;
 		cout << lineD.str();
+		for(int i = 0; i <= sizeof(commFour); ++i)
+		{
+			direction = commFour[i];
+			cin >> direction;
+			move(direction);
+			win == 0;
+			loss == 0;
+			for(int i = 0; i <= sizeof(ogre); ++i)
+			{
+				if(locate() == ogre[i])
+				{
+					++loss;
+					cout << "An ogre sucks your brain out through\n'";
+					cout << "your eye sockets, and you die.\n";
+				}
+				else if(locate() == treasure[i])
+				{
+					++win;
+					cout << "There is a treasure here.\n')";
+					cout << "Congratulations, you win!\n";
+				}
+			}
+			cout << "Average Wins: " << average;
+		}
 
 		lineE << "Scenario: 5"; << endl;
 		lineE << "Commands_v5"; << endl;
